@@ -34,6 +34,8 @@ These test cases align with the functionalities described in the `main.test.jsx`
     - Description: Typing text into the input field and simulating an Enter key press should trigger the dispatch of an action with the typed text as the payload.
     - Expected Outcome: The mock dispatch function should be called with the correct action and payload indicating that a new item has been added.
 
+These test cases correspond to the functionalities tested in the `header.test.jsx` file and should provide a comprehensive suite of tests for the Footer component.
+
 ## C) Footer Component
 
  Based on the test cases created by me in the `footer.test.jsx` file, here's the test plan:
