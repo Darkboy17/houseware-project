@@ -4,6 +4,7 @@ import { render, fireEvent } from "@testing-library/react";
 import { Item } from "./item";
 
 describe("Item Component", () => {
+  // Test Case 1 : Verify that the item's completion status toggles correctly.
   test("toggles the completion status of a todo item", () => {
     const mockDispatch = jest.fn();
     const mockTodo = { id: 1, title: "Test Todo", completed: false };
@@ -21,6 +22,7 @@ describe("Item Component", () => {
     });
   });
 
+  // Test Case 2 : Confirm that the item is removed when the destroy button is clicked.
   test("removes a todo item when the destroy button is clicked", () => {
     const mockDispatch = jest.fn();
     const mockTodo = { id: 1, title: "Test Todo", completed: false };
@@ -38,6 +40,7 @@ describe("Item Component", () => {
     });
   });
 
+  // Test Case 3 : Ensure that the item's title is updated when edited.
   test("updates the title of a todo item when edited", () => {
     const mockDispatch = jest.fn();
     const mockTodo = { id: 1, title: "Test Todo", completed: false };

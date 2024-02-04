@@ -5,6 +5,7 @@ import { Footer } from "./footer";
 import { BrowserRouter as Router } from "react-router-dom";
 
 describe("Footer Component", () => {
+  // Test Case 1: Check that the "Clear completed" button is rendered when there are completed todos.
   test('renders "Clear completed" button when there are completed todos', () => {
     const mockTodos = [
       { id: 1, text: "Todo 1", completed: false },
@@ -23,6 +24,7 @@ describe("Footer Component", () => {
     expect(clearCompletedButton).toBeInTheDocument();
   });
 
+  // Test Case 2: Confirm that the "Clear completed" button is not rendered when there are no completed todos.
   test('does not render "Clear completed" button when there are no completed todos', () => {
     const mockTodos = [
       { id: 1, text: "Todo 1", completed: false },
@@ -41,6 +43,7 @@ describe("Footer Component", () => {
     expect(clearCompletedButton).toBeNull();
   });
 
+  // Test Case 3: Validate that the REMOVE_COMPLETED_ITEMS action is dispatched when the "Clear completed" button is clicked.
   test('dispatches REMOVE_COMPLETED_ITEMS action when "Clear completed" button is clicked', () => {
     const mockTodos = [
       { id: 1, text: "Todo 1", completed: false },

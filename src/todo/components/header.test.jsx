@@ -1,9 +1,9 @@
-// header.test.jsx
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { Header } from "./header";
 
 describe("Header Component", () => {
+  // Test Case 1: Verify that the header renders correctly.
   test("renders correctly", () => {
     const mockDispatch = jest.fn();
     const { getByLabelText } = render(<Header dispatch={mockDispatch} />);
@@ -12,6 +12,7 @@ describe("Header Component", () => {
     expect(getByLabelText("New Todo Input")).toBeInTheDocument();
   });
 
+  // Test Case 2: Ensure that the input field is focused upon rendering.
   test("input field is focused on render", () => {
     const mockDispatch = jest.fn();
     const { getByLabelText } = render(<Header dispatch={mockDispatch} />);
@@ -21,6 +22,7 @@ describe("Header Component", () => {
     expect(document.activeElement).toEqual(inputField);
   });
 
+  // Test Case 3: Confirm that the input field accepts and submits text.
   test("accepts and submits text", () => {
     const mockDispatch = jest.fn();
     const { getByLabelText } = render(<Header dispatch={mockDispatch} />);
